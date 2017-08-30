@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+<meta charset="utf-8">
+<title>droppable demo</title>
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+<style>
+    .draggable {
+        width: 150px;
+        height: 50px;
+        background: #ccc;
+    }
+
+    #droppable {
+        position: absolute;
+        right: 250px;
+        top: 0;
+        width: 500px;
+        height:500px;
+        background: #999;
+        color: #fff;
+        padding: 10px;
+    }
+</style>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</head>
+
+<body>
+
+    <div id="droppable">Drop here</div>
+    <!-- <div id="draggable">Drag me</div> -->
+<img src="sorting_images/sort1.png" id="sort1" class="draggable">
+<img src="sorting_images/sort2.png" id="sort2" class="draggable">
+<img src="sorting_images/sort3.png" id="sort3" class="draggable">
+<img src="sorting_images/sort4.png" id="sort4" class="draggable">
+<img src="sorting_images/sort5.png" id="sort5" class="draggable">
+    <script>
+        $('#sort1').draggable();
+        $('#sort2').draggable();
+        $('#sort3').draggable();
+        $('#sort4').draggable();
+        $('#sort5').draggable();
+        $("#droppable").droppable({
+            drop: function () { }
+        });
+
+    </script>
+        
+    </body>
+
+
+</html>
